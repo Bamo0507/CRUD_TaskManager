@@ -13,7 +13,7 @@ Este proyecto es una aplicación de manejo de tareas tipo CRUD, construida con:
 1. Clonar el repositorio:
 
    ```bash
-   git clone <git@github.com:Bamo0507/CRUD_TaskManager.git>
+   git clone git@github.com:Bamo0507/CRUD_TaskManager.git
    cd CRUD_TaskManager
    ```
 
