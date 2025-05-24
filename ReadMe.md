@@ -19,21 +19,13 @@ Este proyecto es una aplicación de manejo de tareas tipo CRUD, construida con:
 
 2. Configurar entornos:
 
-   * Copiar y renombrar el fichero de variables de entorno para el backend:
+   * Copiar y renombrar el fichero de variables de entorno:
 
      ```bash
-     cp backend/.env.example backend/.env
+     cp env.example .env
      ```
 
-   * Abrir `backend/.env` y ajustar las variables a tu entorno, asegurándote de que los valores de los puertos coincidan con los expuestos en su Dockerfile.
-
-   * Copiar y renombrar el fichero de variables de entorno para el frontend:
-
-     ```bash
-     cp frontend/.env.example frontend/.env
-     ```
-
-   * Abrir `frontend/.env` y ajustar las variables según tu entorno.
+   * Abrir `.env` y ajustar las variables a tu entorno, asegurándote de que los valores de los puertos coincidan con los expuestos en su Dockerfile.
 
    * Copiar `docker-compose.yml.example` a la raíz como `docker-compose.yml`:
 
