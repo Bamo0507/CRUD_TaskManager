@@ -22,7 +22,7 @@ Este proyecto es una aplicación de manejo de tareas tipo CRUD, construida con:
    * Copiar y renombrar el fichero de variables de entorno:
 
      ```bash
-     cp env.example .env
+     cp .env.example .env
      ```
 
    * Abrir `.env` y ajustar las variables a tu entorno, asegurándote de que los valores de los puertos coincidan con los expuestos en su Dockerfile.

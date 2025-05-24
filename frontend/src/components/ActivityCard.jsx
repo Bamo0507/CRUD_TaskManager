@@ -30,8 +30,7 @@ export function ActivityCard({ actividad, onUpdate, onDelete }) {
   const saveEdit = async () => {
     try {
       await api.put(`/actividades/${actividad.id}`, {
-        nombre: editName.trim(),
-        dificultad: Number(editDificultad),
+        nombre: editName.trim()
       });
       setIsEditing(false);
       onUpdate();
@@ -74,6 +73,9 @@ export function ActivityCard({ actividad, onUpdate, onDelete }) {
         ))}
       </div>
 
+      <div className="text-base">
+        Proyecto: <strong>{actividad.proyecto}</strong>
+      </div>
       <div className="text-base">
         Prioridad: <strong>{actividad.prioridad}</strong>
       </div>

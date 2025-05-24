@@ -6,6 +6,7 @@ import { Trash2 } from "lucide-react";
 export function ProjectsCard() {
     const { data: proyectos, loading, error, refetch } = useFetch("/proyectos");
     const [newName, setNewName] = useState("");
+    const [deleteError, setDeleteError] = useState("");
 
     const handleCreate = async () => {
         try {
@@ -20,11 +21,17 @@ export function ProjectsCard() {
     };
 
     const handleDelete = async (id) => {
+        setDeleteError("");
         try {
             await api.delete(`/proyectos/${id}`);
             refetch();
         } catch (err) {
             console.error(err);
+            const msg =
+              err.response?.status === 409
+                ? "No se puede eliminar este proyecto: tiene actividades asociadas."
+                : "No se puede eliminar este proyecto: tiene actividades asociadas.";
+            setDeleteError(msg);
         }
     };
 
@@ -49,6 +56,11 @@ export function ProjectsCard() {
           </form>
     
           <h3 className="text-lg font-extrabold mb-2">Lista de Proyectos</h3>
+          {deleteError && (
+            <div className="bg-red-100 text-red-800 p-2 rounded mb-4">
+              {deleteError}
+            </div>
+          )}
           <ul className="space-y-2">
             {proyectos.map(p => (
               <li key={p.id} className="flex justify-between items-center">
