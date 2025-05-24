@@ -66,3 +66,7 @@ Una vez levantado:
 * **Frontend**: `http://localhost:<FRONTEND_PORT>`
 
 ---
+
+## Diagrama entidad relacion
+
+![Diagrama del Laboratorio 3](Laboratorio3.png)
