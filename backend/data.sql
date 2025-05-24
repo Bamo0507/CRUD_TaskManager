@@ -1,7 +1,7 @@
 -- ----------------------------------------
 -- Proyectos (10 registros)
 -- ----------------------------------------
-INSERT INTO proyecto (nombre) VALUES
+INSERT INTO public.proyecto (nombre) VALUES
 ('Introducción a la Programación'),
 ('Estructuras de Datos'),
 ('Bases de Datos'),
@@ -16,7 +16,7 @@ INSERT INTO proyecto (nombre) VALUES
 -- ----------------------------------------
 -- Prioridades (3 registros)
 -- ----------------------------------------
-INSERT INTO prioridad (nivel) VALUES
+INSERT INTO public.prioridad (nivel) VALUES
 ('Baja'),
 ('Media'),
 ('Alta');
@@ -24,7 +24,7 @@ INSERT INTO prioridad (nivel) VALUES
 -- ----------------------------------------
 -- Etiquetas (15 registros)
 -- ----------------------------------------
-INSERT INTO etiqueta (nombre) VALUES
+INSERT INTO public.etiqueta (nombre) VALUES
 ('Urgente'),
 ('Bloqueado'),
 ('En espera'),
@@ -44,7 +44,7 @@ INSERT INTO etiqueta (nombre) VALUES
 -- ----------------------------------------
 -- Actividades (12 registros)
 -- ----------------------------------------
-INSERT INTO actividad (nombre, dificultad, "proyectoId", "prioridadId") VALUES
+INSERT INTO public.actividad (nombre, dificultad, "proyectoId", "prioridadId") VALUES
 ('Instalar entorno de desarrollo', 5, 1, 2),
 ('Diseñar diagrama de clases', 20, 2, 3),
 ('Modelar esquema de base de datos', 30, 3, 2),
@@ -62,7 +62,7 @@ INSERT INTO actividad (nombre, dificultad, "proyectoId", "prioridadId") VALUES
 -- Relaciones Actividad ↔ Etiqueta (24 registros)
 -- 2 etiquetas asignadas a cada actividad
 -- ----------------------------------------
-INSERT INTO actividad_etiquetas ("actividadId", "etiquetaId") VALUES
+INSERT INTO public.actividad_etiquetas ("actividadId", "etiquetaId") VALUES
 (1, 1),(1, 6),
 (2, 4),(2, 5),
 (3, 3),(3, 6),
@@ -75,3 +75,4 @@ INSERT INTO actividad_etiquetas ("actividadId", "etiquetaId") VALUES
 (10, 6),(10, 14),
 (11, 7),(11, 5),
 (12, 5),(12, 10);
+
